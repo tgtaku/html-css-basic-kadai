@@ -1,0 +1,85 @@
+/* h1、p、body要素の上下左右余白（margin）を0に設定 */
+h1 p body{
+    margin: 0;
+}
+/* 記事内全てのp要素とa要素のフォントサイズを20pxに設定 */
+p a{
+    font-size: 20px;
+}
+/* header要素 */
+header{
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+}
+
+h2{
+    font-size: 25px;
+    border-bottom: 3px dashed rgb(236, 122, 122);
+}
+
+h2::before{
+    content: "●";
+    color: rgb(239, 111, 139);
+}
+
+main{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contents p:nth-of-type(2)::first-letter{
+    font-weight: bold;
+    color: rgb(97, 206, 249);
+}
+
+footer{
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+footer a{
+    color: rgb(255, 255, 255);
+}
+
+footer a:visited{
+    color: rgb(193, 234, 251);
+}
+
+footer a:hover{
+    color: rgb(245, 178, 168);
+}
+
+#parent{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contents{
+    border: 3px solid rgb(238, 204, 204);
+    flex-basis: 25%;
+    padding: 10px 15px 10px 15px;
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+.contents img{
+    margin: 10px 0 10px 0;
+    width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: 30px;
+    }
+    p{
+        font-size: 25px;
+    }
+    #parent{
+        flex-direction: column;
+    }
+}
